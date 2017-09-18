@@ -1,0 +1,40 @@
+#format(starting from "=talk="): 
+## date (blank = next Friday)
+## address (blank = B1-501)
+## paper info:
+### conf/journal/tech.rep.(short name, e.g., INFOCOM'17, Tech.Rep.)
+### title
+### link
+### presenter
+
+=talk=
+17/09/11
+B1-501
+NFV-SDN'16
+Efficient service Graph Embedding: A Practical Approach
+https://www.net.t-labs.tu-berlin.de/~stefan/o4sdi16.pdf
+Chang Shu
+
+=talk=
+17/09/11
+B1-501
+SenSys'17
+Network-wide Consensus Utilizing the Capture Effect in Low-power Wireless Networks
+www.simonduquennoy.net/papers/alnahas17a2.pdf
+Weifeng Gao
+
+=talk=
+17/09/22
+B1-501
+INFOCOM'17
+Traffic Aware Placement of Interdependent NFV Middleboxes
+https://users.cs.fiu.edu/~pand/publications/17infocom-wenrui.pdf
+Zhe Wang
+
+=talk=
+17/09/22
+B1-501
+INFOCOM'17
+LightTouch: Securely Connecting Wearables to Ambient Displays with User Intent
+https://thawproject.files.wordpress.com/2017/04/liang-lighttouch.pdf
+Yaoyao Pang
