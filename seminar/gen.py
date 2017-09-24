@@ -136,8 +136,7 @@ def update():
 	</TD>
 	</table>
 	<hr>
-	</div>
-	<div style="width:840px;margin-left:auto;margin-right:auto;">
+	
 	<h3>Latest</h3>
 	<b>Time (yymmdd):</b>"""+date+"""
 	<br>
