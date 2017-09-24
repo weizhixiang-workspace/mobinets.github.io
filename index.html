@@ -1,50 +1,137 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>MobiNetS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
+﻿<!DOCTYPE HTML>
+<HTML>
+<font  face="Arial">
+<HEAD>
+<TITLE>MobiNetS</TITLE>
+<style type="text/css">
+#returntop{
+	border:1px #ccc solid;
+	background:#FFF;
+	width:80px;
+	height:30px;
+	position:fixed;
+	_position:absolute;
+	line-height:30px;
+	text-align:center;
+	top:0px;
+	left:0px;
+	display:none;
+	cursor:pointer;
+}
+</style>
+</HEAD>
+<BODY BGCOLOR="#FFFFDE">
 
-    <section class="page-header">
-      <h1 class="project-name">MobiNets</h1>
-      <h2 class="project-tagline">Mobile, Networked and Smart Computing Group</h2>
-    </section>
+<!-- The back top button-->
+<div id="returntop"><a href="#top">Back Top</a></div>
+<script type="text/javascript">
+var getDiv=document.getElementById('returntop');
+var n=0;
+function scrollEvent(){
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	if(scrollTop){
+		getDiv.style.display="block";
+	}else{
+		getDiv.style.display="none";
+	}
+	n=1;
+}
+window.onscroll=scrollEvent;
+if(n==0){
+	document.body.onscroll=scrollEvent;
+}
+function getWinSize(){
+	var winHeight=window.innerHeight,winWidth=window.innerWidth;
+	if(document.documentElement.clientHeight){
+		winHeight=document.documentElement.clientHeight;
+		winWidth=document.documentElement.clientWidth;
+	}else{
+		winHeight=document.body.clientHeight;
+		winWidth=document.body.clientWidth;
+	}
+    var height=winHeight-50;
+	var width=winWidth-100;
+	getDiv.style.top=height+"px";
+	getDiv.style.left=width+"px";
+}
+getWinSize();
+window.onresize=getWinSize;
+</script>
+<!-- The back top button-->
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-mobinets" class="anchor" href="#welcome-to-mobinets" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to MobiNets.</h3>
+<div style="width:840px;margin-left:auto;margin-right:auto;">
+<table style="table-layout: fixed">
+<TD width="220"> 
+ <a href="http://mobinets.org/" alt="Home">
+ <IMG SRC="http://mobinets.org/img/mobinetslogo.gif" alt="Home" width="80%" hspace="5" border="0">
+</a>
+</TD>
+<TD>
+<h1>MobiNetS</h1> 
+<P><STRONG>Mobile, Networked and Smart Computing Group</STRONG>
+<br/>
+<font size="">
+[<a href="http://mobinets.org/people/">people</a>]
+[<a href="http://mobinets.org/seminar/">seminar</a>]
+[<a href="http://mobinets.org/research/">research</a>]
+[<a href="http://mobinets.org/pub/">publications</a>]
+<!-- [<a href="recruit">recruit</a>] -->
+</font>
+</P>
+</TD>
+</Table>
+</P>
+<hr noshade>
 
-<p>MobiNets is a research group targeting at the cutting-edge topics in the area of next-generation mobile internet, including SDN, NFV, mobile computing, Low power and Wireless Networks, Wireless Sensing, etc.
-Our group now works in <a href="http://www.ccse.uestc.edu.cn/">UESTC@China</a>. </p>
+<P align="justify">
+MobiNetS is a research group targeting at the cutting-edge topics in the area of mobile, networked and smart computing, including mobile edge computing (MEC), software-defined computing (SDx), network function virtulization (NFV), low power and wireless sensor networks (LP-WSN), wireless sensing, etc. Our group works in UESTC@China. 
+<br>
+</P>
+<!-- <hr noshade>
+ -->
+ <table>
+	<td align="center" width="210">
+ 	<a href="people/">
+ 	<IMG SRC="img/icon_people.png" alt="People" height="160" hspace="5" border="0"/><br>
+ 	People</a>
+	</td>
+	<td align="center" width="210">
+ 	<a href="seminar/">
+ 	<IMG SRC="img/icon_seminar.png" alt="Seminar" height="160" hspace="5" border="0"/><br>
+ 	Seminar</a>
+	</td>
+	<td align="center" width="210">
+ 	<a href="research/">
+ 	<IMG SRC="img/icon_research.png" alt="Research" height="160" hspace="5" border="0"/><br>
+ 	Research</a>
+	</td>
+	<td align="center" width="210">
+ 	<a href="pub/">
+ 	<IMG SRC="img/icon_pub.png" alt="Outcome" height="160" hspace="5" border="0"/><br>
+ 	Publications</a>
+	</td>
+</table>
+<hr noshade>
 
-<h3>
-<a id="info" class="anchor" href="#the-page-is-under-construction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Infomation</h3>
-<strong>团队介绍和招生信息在<a target="_blank" href="http://yz.uestc.edu.cn/daoshijieshao/mentor.php?id=12344">这里</a>.</strong><br/>
-Our members can be found <a href="http://mobinets.org/people/">here</a>.<br/>
-Our weekly seminar can be found <a href="http://mobinets.org/seminar/">here</a>.
-<h3>
-<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h3>
 
-<p><a href="http://ZhiweiZhao.com">Zhiwei Zhao</a></p>
-
-      <footer class="site-footer">
+<!-- Begin Motigo Webstats counter code 
+	<a id="mws4946886" href="http://webstats.motigo.com/">
+		<img border="0" alt="Free counter and stats for your website on www.motigo.com" src="http://motigo.com/images/webstats_counter/n80x15-7.gif?id=4946886" />
+	</a>
+End Motigo Webstats counter code -->
+	
 <!-- hitwebcounter Code START -->
 <a href="" target="_blank">
-<img src="http://hitwebcounter.com/counter/counter.php?page=6771665&style=0024&nbdigits=5&type=page&initCount=0" title="webs counters" Alt="webs counters"   border="0" >
-</a>                                        <br/>
-<table>
-  <td width="100">
-    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=DOTc-D434U0ZSKbyWsCAlJ-ga6QbVAwMUDDhExVj0B0&cl=ffffff&w=a"></script>
-  </td>
-</table>
-</footer>
-    </section>
-  
-  </body>
-</html>
+<img src="http://hitwebcounter.com/counter/counter.php?page=6208054&style=0024&nbdigits=5&type=page&initCount=556" title="Track counters" Alt=""   border="0" >
+</a><br/>
+
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=NkC4&d=_X2HRNCM-hYnjCqX8EEEbJVR0hT-3LusML7fSP3jHo4"></script>
+
+</div>
+
+</BODY>
+</HTML>
+ 
+ 
+ 
+
