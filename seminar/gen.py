@@ -225,6 +225,7 @@ def mail():
 	<br/>
 	2. %s, %s
 	<br/>
+	<br/>
 	Please find the details and download the papers at
 	<a href="http://mobinets.org/seminar">http://mobinets.org/seminar</a>
 	<br/>
