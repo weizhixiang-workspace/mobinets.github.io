@@ -1,10 +1,10 @@
 # HTML code generation and mail notification
 
 Files needed: 
-1. gen.py -- the main script
-2. mail.personal -- the information required for email
+1. ``gen.py`` -- the main script
+2. ``mail.personal`` -- the information required for email
 
-##Prepare mail.personal
+## Prepare mail.personal
 
 Before using the script, you need to create a file named ``mail.personal``, containing the necessary information for sending emails. 
 The template for creating ``mail.personal`` is given as follows:
@@ -16,11 +16,11 @@ The template for creating ``mail.personal`` is given as follows:
 \[from\]:USERNAME@mobinets.org   
 \[to\]:notice@mobinets.org   
 
-Please fill the username and password only.
+Please copy the above text and replace the username and password only in the mail.personal file.
 DO NOT change the above format.
 Note: This file will not be uploaded to github and is available only to yourself.
 
-##Usage
+## Usage
 
 1. python gen.py
 2. Input the required information.
