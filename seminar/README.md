@@ -17,7 +17,7 @@ The template for creating ``mail.personal`` is given as follows:
 \[to\]:notice@mobinets.org   
 
 Please copy the above text and replace the username and password only in the created ``mail.personal`` file.
-**DO NOT change the above format.**
+**DO NOT change the above format.**   
 Note: *This file will not be uploaded to github and is available only to yourself*.
 
 ## Usage
