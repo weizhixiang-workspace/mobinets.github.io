@@ -9,14 +9,12 @@ Files needed:
 Before using the script, you need to create a file named ``mail.personal``, containing the necessary information for sending emails. 
 The template for creating ``mail.personal`` is given as follows:
 
-``
-[mailhost]:smtp.exmail.qq.com\n
-[mailport]:465\n
-[mailuser]:USERNAME@mobinets.org\n
-[mailpass]:PASSWORD
-[from]:USERNAME@mobinets.org
-[to]:notice@mobinets.org
-``
+\[mailhost\]:smtp.exmail.qq.com
+\[mailport\]:465
+\[mailuser\]:USERNAME@mobinets.org
+\[mailpass\]:PASSWORD
+\[from\]:USERNAME@mobinets.org
+\[to\]:notice@mobinets.org
 
 Please fill the username and password only.
 DO NOT change the above format.
