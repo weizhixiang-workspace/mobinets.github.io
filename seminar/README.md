@@ -2,7 +2,7 @@
 
 Files needed: 
 1. ``gen.py`` -- the main script
-2. ``mail.personal`` -- the information required for email
+2. ``mail.personal`` -- the information required for sending email
 
 ## Prepare mail.personal
 
@@ -16,9 +16,9 @@ The template for creating ``mail.personal`` is given as follows:
 \[from\]:USERNAME@mobinets.org   
 \[to\]:notice@mobinets.org   
 
-Please copy the above text and replace the username and password only in the mail.personal file.
-DO NOT change the above format.
-Note: This file will not be uploaded to github and is available only to yourself.
+Please copy the above text and replace the username and password only in the created ``mail.personal`` file.
+**DO NOT change the above format.**
+Note: *This file will not be uploaded to github and is available only to yourself*.
 
 ## Usage
 
