@@ -240,7 +240,7 @@ def mail():
 	message['From'] = Header("Seminar Notification", 'utf-8')
 	message['To'] =  Header("All members", 'utf-8')
 
-	subject = 'Seminar Notification[%s]'%(date)
+	subject = 'Seminar Notification [%s]'%(date)
 	message['Subject'] = Header(subject, 'utf-8')
 
 	try:
@@ -250,7 +250,7 @@ def mail():
 	    smtp.login(mailuser,mailpass)
 	    smtp.sendmail(sender, receiver, message.as_string())
 	    print "Notified."
-	except Exception as e:  
+	except Exception as e:
 	    print e
 
 collectInfo()
