@@ -14,16 +14,16 @@ from email.header import Header
 def collectInfo():
 	global date,addr,conf1,title1,link1,presenter1,conf2,title2,link2,presenter2
 	global str_summary
-	date = input("data(yy/mm/dd): ")
-	addr = input("addr(room # e.g., B1-501): ")
-	conf1 = input("1st conf/journal name (short name): ")
-	title1 = input("1st paper title: ")
-	link1 = input("1st download link: ")
-	presenter1 = input("1st presenter: ")
-	conf2 = input("2nd conf/journal name (short name): ")
-	title2 = input("2nd paper title: ")
-	link2 = input("2nd download link: ")
-	presenter2 = input("2nd presenter: ")
+	date = raw_input("data(yy/mm/dd): ")
+	addr = raw_input("addr(room # e.g., B1-501): ")
+	conf1 = raw_input("1st conf/journal name (short name): ")
+	title1 = raw_input("1st paper title: ")
+	link1 = raw_input("1st download link: ")
+	presenter1 = raw_input("1st presenter: ")
+	conf2 = raw_input("2nd conf/journal name (short name): ")
+	title2 = raw_input("2nd paper title: ")
+	link2 = raw_input("2nd download link: ")
+	presenter2 = raw_input("2nd presenter: ")
 	# date = "1"
 	# addr = "2"
 	# conf1 = "3"
@@ -49,7 +49,7 @@ def collectInfo():
 	confirm()
 
 def confirm():
-	confirm = input("summary:"+str_summary+"update? (y/n)\n")
+	confirm = raw_input("summary:"+str_summary+"update? (y/n)\n")
 	if confirm == "y":
 		update()
 		mail()
