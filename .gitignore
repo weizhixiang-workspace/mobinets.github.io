@@ -1,6 +1,8 @@
 # personal files
 
+
 *.personal
+
 *.DS_Store
+
 *.exe
-seminar/mailGen
