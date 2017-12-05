@@ -22,6 +22,7 @@ Note: *This file will not be uploaded to github and is available only to yoursel
 
 ## Usage
 
+0. mailGen/Scripts/activate
 1. python gen.py
 2. Input the required information.
 3. Confirm the information and update/notify by input ``y''.
