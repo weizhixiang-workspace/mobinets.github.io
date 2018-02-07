@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 #format(starting from "=talk="): 
 ## date (blank = next Friday)
 ## address (blank = B1-501)
@@ -6,6 +7,9 @@
 ### title
 ### link
 ### presenter
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
 
 def collectInfo():
 	global date,addr,conf1,title1,link1,presenter1,conf2,title2,link2,presenter2
@@ -48,6 +52,7 @@ def confirm():
 	confirm = raw_input("summary:"+str_summary+"update? (y/n)\n")
 	if confirm == "y":
 		update()
+		mail()
 	elif confirm == "n":
 		collectInfo()
 	else:
@@ -186,5 +191,66 @@ def update():
 	fo = open("index.html", "w")
 	fo.write(html)
 	fo.close()
+
+def mail():
+	fm = open('mail.personal')
+	for line in fm.readlines():
+		line = line.strip('\n')
+		if "[mailhost]" in line:
+			tmp = line.split(':')
+			mailhost = tmp[1]
+		if "[mailuser]" in line:
+			tmp = line.split(':')
+			mailuser = tmp[1]
+		if "[mailpass]" in line:
+			tmp = line.split(':')
+			mailpass = tmp[1]
+		if "[mailport]" in line:
+			tmp = line.split(':')
+			mailport = tmp[1]
+		if "[from]" in line:
+			tmp = line.split(':')
+			sender = tmp[1]
+		if "[to]" in line:
+			tmp = line.split(':')
+			receiver = tmp[1]
+	fm.close()
+	mainmsg = """
+	<p>Dear all, 
+	<br/>
+	<br/>
+	%s and %s will present two research works as follows on %s.
+	<br/>
+	1. %s, %s
+	<br/>
+	2. %s, %s
+	<br/>
+	<br/>
+	Please find the details and download the papers at
+	<a href="http://mobinets.org/seminar">http://mobinets.org/seminar</a>
+	<br/>
+	<br/>
+	Best, 
+	<br/>
+	MobiNets
+	</p>
+	"""%(presenter1,presenter2,date,conf1,title1,conf2,title2)
+
+	message = MIMEText(mainmsg, 'html', 'utf-8')
+	message['From'] = Header("Seminar Notification", 'utf-8')
+	message['To'] =  Header("All members", 'utf-8')
+
+	subject = 'Seminar Notification [%s]'%(date)
+	message['Subject'] = Header(subject, 'utf-8')
+
+	try:
+	    smtp = smtplib.SMTP_SSL()
+	    # smtp.ehlo()
+	    smtp.connect(mailhost,mailport)
+	    smtp.login(mailuser,mailpass)
+	    smtp.sendmail(sender, receiver, message.as_string())
+	    print ("Notified.")
+	except Exception as e:
+	    print (e)
 
 collectInfo()
