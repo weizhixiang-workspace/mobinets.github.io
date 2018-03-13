@@ -135,6 +135,7 @@ def update():
 	[<a href="http://mobinets.org/seminar/">seminar</a>]
 	[<a href="http://mobinets.org/research/">research</a>]
 	[<a href="http://mobinets.org/pub/">publications</a>]
+	[<a href="http://mobinets.org/misc/recruit.html">招生</a>]
 	<!-- [<a href="recruit">recruit</a>] -->
 	</font>
 	</P>
@@ -146,7 +147,7 @@ def update():
 	<h3>Latest</h3>
 	<b>Time (yymmdd):</b>"""+date+"""
 	<br>
-	<b>Address:</b> """+addr+""", Main Building, Qingshuihe, UESTC
+	<b>Address:</b> """+addr+""", Qingshuihe, UESTC
 	<ol>
 	"""
 	str_new = """
