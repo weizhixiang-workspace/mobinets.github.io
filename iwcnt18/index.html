@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML>
+<HTML>
+<font  face="Arial">
+<HEAD>
+<TITLE>MobiNetS Publications</TITLE>
+<style type="text/css">
+#returntop{
+	border:1px #ccc solid;
+	background:#FFF;
+	width:80px;
+	height:30px;
+	position:fixed;
+	_position:absolute;
+	line-height:30px;
+	text-align:center;
+	top:0px;
+	left:0px;
+	display:none;
+	cursor:pointer;
+}
+</style>
+</HEAD>
+<BODY style="background-image : url(http://mobinets.org/img/bg.png);background-repeat : repeat-xy;">
+
+<!-- The back top button-->
+<div id="returntop"><a href="#top">Back Top</a></div>
+
+
+<script type="text/javascript">
+var getDiv=document.getElementById('returntop');
+var n=0;
+function scrollEvent(){
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	if(scrollTop){
+		getDiv.style.display="block";
+	}else{
+		getDiv.style.display="none";
+	}
+	n=1;
+}
+window.onscroll=scrollEvent;
+if(n==0){
+	document.body.onscroll=scrollEvent;
+}
+function getWinSize(){
+	var winHeight=window.innerHeight,winWidth=window.innerWidth;
+	if(document.documentElement.clientHeight){
+		winHeight=document.documentElement.clientHeight;
+		winWidth=document.documentElement.clientWidth;
+	}else{
+		winHeight=document.body.clientHeight;
+		winWidth=document.body.clientWidth;
+	}
+    var height=winHeight-50;
+	var width=winWidth-100;
+	getDiv.style.top=height+"px";
+	getDiv.style.left=width+"px";
+}
+getWinSize();
+window.onresize=getWinSize;
+</script>
+<!-- The back top button-->
+<div align="left" style="width:840px;margin-left:auto;margin-right:auto;">
+<IMG SRC="head.png" alt="Home" width="100%" hspace="5" border="0"/>
+<p>
+The 2nd International Workshop on Advanced Topics in Computer Communication and Networking Technologies (IWCNT-2018) is held in conjunction with The 20th International Conference on High Performance Computing and Communications (HPCC-2018), 28-30 June 2018, Exeter, UK<br/>
+<hr>
+<h3>Scope and Interests</h3>
+The IWCNT-2018 workshop consists of invited peer-reviewed papers in emerging ideas and trends in the frontier of computer communications from both the research community as well as the industry.<br/>
+This workshop aims at providing an additional forum within HPCC-2018 for presenting, exchanging and discussing the most recent advances in different aspects of communications and networking technologies and applications, including:
+</p>
+<ul>
+<li>Big data in networks</li>
+<li>Future networks</li>
+<li>Wireless networks</li>
+<li>Green networking</li>
+<li>Trust, Security and Privacy in future networks</li>
+<li>Network function virtualization</li>
+<li>AI in networks</li>
+<li>Software-defined networks</li>
+<li>Low-power wireless</li>
+<li>Embedded networked systems</li>
+<li>Ad hoc networks</li>
+<li>Cyber-Physical Systems and Internet of things</li>
+</ul>
+<hr> 
+<h3>Important Dates</h3>
+Submission Deadline: Invitation only from peer-review results<br/>
+Author Notification: 23 March 2018<br/>
+Camera-Ready Paper Due: 25 May 2018<br/>
+Early Registration Due: 25 May 2018<br/>
+<hr>
+<h3>Paper Submission Guideline</h3>
+Invited authors should submit a full paper of 6 pages (with 2 extra page purchase allowed), including all figures, tables and references. The authors should follow the instructions of the "Online Author Kit" at the IWCNT-2018 website for the preparation of the final manuscript. The author registration date and the final manuscript due date are strict. Please do follow the announcements on the HPCC-2018 web site.
+<br/>
+Accepted papers will be included in the main conference proceedings to be published by IEEE Computer Society Press. Each accepted paper must have one Author Registration for publication in the proceedings. 
+<hr>
+<h3>Organization Committees</h3>
+Zhiwei Zhao, University of Electronic Science and Technology of China, China<br/>
+Haozhe Wang, University of Exeter, UK<br/>
+Chang Shu, University of Electronic Science and Technology of China, China
+</div>
+
+</BODY>
+</HTML>
+ 
+ 
+ 
+
