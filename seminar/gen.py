@@ -14,7 +14,7 @@ from email.header import Header
 def collectInfo():
 	global date,addr,conf1,title1,link1,presenter1,conf2,title2,link2,presenter2
 	global str_summary
-	date = raw_input("data(yy/mm/dd): ")
+	date = raw_input("time(yy/mm/dd hh:mm): ")
 	addr = raw_input("addr(room # e.g., B1-501): ")
 	conf1 = raw_input("1st conf/journal name (short name): ")
 	title1 = raw_input("1st paper title: ")
@@ -233,7 +233,7 @@ def mail():
 	<br/>
 	Best, 
 	<br/>
-	MobiNets
+	MobiNetS
 	</p>
 	"""%(presenter1,presenter2,date,conf1,title1,conf2,title2)
 
