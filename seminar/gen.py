@@ -52,7 +52,7 @@ def confirm():
 	confirm = raw_input("summary:"+str_summary+"update? (y/n)\n")
 	if confirm == "y":
 		update()
-		mail()
+		# mail()
 	elif confirm == "n":
 		collectInfo()
 	else:
