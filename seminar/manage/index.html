@@ -1,14 +1,93 @@
-<!doctype html>
-<html lang="en">
-    <head>
+    <!DOCTYPE HTML>
+    <HTML>
+    <font  face="Arial">
+    <HEAD>
         <meta charset="UTF-8">
-        <title>登陆</title>
-    </head>
-    <body>
-        <form name="login" action="http://139.196.75.174/mbnets/login.php" method="post">
-                <p>用户名<input type=text name="name"></p>
-                <p>密 码<input type=password name="password"></p>
-                <p><input type="submit" name="submit" value="登录"></p>
+    <TITLE>Login</TITLE>
+    <style type="text/css">
+    #returntop{
+        border:1px #ccc solid;
+        background:#FFF;
+        width:80px;
+        height:30px;
+        position:fixed;
+        _position:absolute;
+        line-height:30px;
+        text-align:center;
+        top:0px;
+        left:0px;
+        display:none;
+        cursor:pointer;
+    }
+    </style>
+    </HEAD>
+    <BODY style="background-image : url(http://mobinets.org/img/bg.png);background-repeat : repeat-xy;">
+    <!-- The back top button-->
+    <div id="returntop"><a href="#top">Back Top</a></div>
+    <script type="text/javascript">
+    var getDiv=document.getElementById('returntop');
+    var n=0;
+    function scrollEvent(){
+        var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+        if(scrollTop){
+            getDiv.style.display="block";
+        }else{
+            getDiv.style.display="none";
+        }
+        n=1;
+    }
+    window.onscroll=scrollEvent;
+    if(n==0){
+        document.body.onscroll=scrollEvent;
+    }
+    function getWinSize(){
+        var winHeight=window.innerHeight,winWidth=window.innerWidth;
+        if(document.documentElement.clientHeight){
+            winHeight=document.documentElement.clientHeight;
+            winWidth=document.documentElement.clientWidth;
+        }else{
+            winHeight=document.body.clientHeight;
+            winWidth=document.body.clientWidth;
+        }
+        var height=winHeight-50;
+        var width=winWidth-100;
+        getDiv.style.top=height+"px";
+        getDiv.style.left=width+"px";
+    }
+    getWinSize();
+    window.onresize=getWinSize;
+    </script>
+    <!-- The back top button-->
+    <div align="center" style="width:840px;margin-left:auto;margin-right:auto;">
+    <table style="table-layout: fixed">
+    <TD width="220"> 
+     <a href="http://mobinets.org/" alt="Home">
+     <IMG SRC="http://mobinets.org/img/mobinetslogo.gif" alt="Home" width="80%" hspace="5" border="0">
+    </a>
+    </TD>
+    <TD>
+    <h1>MobiNetS</h1> 
+    <P><STRONG>Mobile, Networked and Smart Computing Group</STRONG>
+    <br/>
+    <font size="">
+    [<a href="http://mobinets.org/people/">people</a>]
+    [<a href="http://mobinets.org/seminar/">seminar</a>]
+    [<a href="http://mobinets.org/research/">research</a>]
+    [<a href="http://mobinets.org/pub/">publications</a>]
+    [<a href="http://mobinets.org/misc/recruit.html">招生</a>]
+    <!-- [<a href="recruit">recruit</a>] -->
+    </font>
+    </P>
+    </TD>
+    </table>
+    <hr><br>
+    <form name="login" action="http://139.196.75.174/mbnets/login.php" method="post">
+            <td>Username<input type=text name="name"></td>
+            <td>Password<input type=password name="password"></td>
+            <td><input type="submit" name="submit" value="登录"></td>
             </form>
-    </body>
-</html>
+            <br>
+        <a href="addPresentations.html">Already logged in?</a>
+    <!-- <div align="center">Seminar @ MobiNetS</div> -->
+    </BODY>
+    </HTML>

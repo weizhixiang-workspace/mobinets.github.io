@@ -1,16 +1,113 @@
-<!doctype html>
-<html lang="en">
-    <head>
+    <!DOCTYPE HTML>
+    <HTML>
+    <font  face="Arial">
+    <HEAD>
         <meta charset="UTF-8">
-        <title>Add Seminar Presentations</title>
-    </head>
-    <body>
-        <form action="http://139.196.75.174/mbnets/addSem.php" method="post">
-            <p>Time:<input type="text" name="time"></p>
-            <p>Conference/Journal Name: <input type="text" name="confname"></p>
-            <p>Paper title:<input type="text" name="title"></p>
-            <p>Presenter: <input type="text" name="presenter"></p>
-            <p><input type="submit" name="submit" value="ADD"></p>
+    <TITLE>Add Seminar Presentations</TITLE>
+    <script src="laydate/laydate.js"></script>
+    <style type="text/css">
+    #returntop{
+        border:1px #ccc solid;
+        background:#FFF;
+        width:80px;
+        height:30px;
+        position:fixed;
+        _position:absolute;
+        line-height:30px;
+        text-align:center;
+        top:0px;
+        left:0px;
+        display:none;
+        cursor:pointer;
+    }
+    </style>
+    </HEAD>
+    <BODY style="background-image : url(http://mobinets.org/img/bg.png);background-repeat : repeat-xy;">
+    <!-- The back top button-->
+    <div id="returntop"><a href="#top">Back Top</a></div>
+    <!-- The back top button-->
+    <div align="center" style="width:840px;margin-left:auto;margin-right:auto;">
+    <table style="table-layout: fixed">
+    <TD width="220">
+     <a href="http://mobinets.org/" alt="Home">
+     <IMG SRC="http://mobinets.org/img/mobinetslogo.gif" alt="Home" width="80%" hspace="5" border="0">
+    </a>
+    </TD>
+    <TD>
+    <h1>MobiNetS</h1> 
+    <P><STRONG>Mobile, Networked and Smart Computing Group</STRONG>
+    <br/>
+    <font size="">
+    [<a href="http://mobinets.org/people/">people</a>]
+    [<a href="http://mobinets.org/seminar/">seminar</a>]
+    [<a href="http://mobinets.org/research/">research</a>]
+    [<a href="http://mobinets.org/pub/">publications</a>]
+    [<a href="http://mobinets.org/misc/recruit.html">招生</a>]
+    <!-- [<a href="recruit">recruit</a>] -->
+    </font>
+    </P>
+    </TD>
+    </table>
+    <hr><br>
+    <form action="http://139.196.75.174/mbnets/addSem.php" method="post">
+            <table style="table-layout: fixed">
+            <TD align="center" width="168">Location:</TD>
+            <TD align="center" width="168"><input required id="location" list="locations" style="width:400px; height:20px;" type="text" name="location">
+            <datalist id="locations" style="display:none;">
+            <option value="B1-612, Main Building">B1-612, Main Building</option>
+            <option value="B1-501, Main Building">B1-501, Main Building</option>
+            </datalist>
+            </input>
+            </TD>
+            </table>
+            <table style="table-layout: fixed">
+            <TD align="center" width="168">Time:</TD>
+            <TD align="center" width="168"><input required readonly="readonly" style="width:400px; height:20px;" type="text" name="time" id="timeSelect">
+                <script type="text/javascript">
+                    laydate.render({
+                        lang: 'en',
+                  elem: '#timeSelect' //指定元素
+                });
+                </script>
+            </input></TD>
+            </table>
+            <table style="table-layout: fixed">
+            <TD align="center" width="168">Conference/Journal Name:</TD>
+            <TD align="center" width="168"><input required placeholder="Short name, e.g., INFOCOM'18" style="width:400px; height:20px;" type="text" name="confname">
+            </input>
+            </TD>
+            </table>
+            <table style="table-layout: fixed">
+            <TD align="center" width="168">Paper title:</TD>
+            <TD align="center" width="168"><input required style="width:400px; height:20px;" type="text" name="title"></TD>
+            </table>
+            <table style="table-layout: fixed">
+            <TD align="center" width="168">Presenter:</TD>
+            <TD align="center" width="168"><input required list="presenters" style="width:400px; height:20px;" type="text" name="presenter"></TD>
+            <datalist id="presenters">
+                <option value="Chang Shu">Chang Shu</option>
+                <option value="Weifeng Gao">Weifeng Gao</option>
+                <option value="Zhe Wang">Zhe Wang</option>
+                <option value="Yuntong Zhang">Yuntong Zhang</option>
+                <option value="Zifei Zhao">Zifei Zhao</option>
+                <option value="Yaoyao Pang">Yaoyao Pang</option>
+                <option value="Hui Cao">Hui Cao</option>
+                <option value="Shuowei Chen">Shuowei Chen</option>
+                <option value="Yunpeng Han">Yunpeng Han</option>
+                <option value="Xinyuan Huang">Xinyuan Huang</option>
+                <option value="Minghang Yang">Minghang Yang</option>
+                <option value="Heng Yuan">Heng Yuan</option>
+                <option value="Wenjie Huang">Wenjie Huang</option>
+                <option value="Xuan Yang">Xuan Yang</option>
+                <option value="Yuhong Jiang">Yuhong Jiang</option>
+                <option value="Anqi Yang">Anqi Yang</option>
+                <option value="Jingwei Li">Jingwei Li</option>
+            </datalist>
+            </table>
+            <br>
+            <input type="submit" name="submit" value="Add Presentation">
+            <input type="button" onclick="{location.href='http://mobinets.org/seminar'}" value="Back to seminar">
         </form>
-    </body>
-</html>
+            <br>
+    </BODY>
+</HTML>
