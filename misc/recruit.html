@@ -2,6 +2,7 @@
 <HTML>
 <font  face="Arial">
 <HEAD>
+	<meta charset="utf-8">
 <TITLE>MobiNetS招生信息</TITLE>
 <style type="text/css">
 #returntop{
@@ -56,6 +57,31 @@ function getWinSize(){
 getWinSize();
 window.onresize=getWinSize;
 </script>
+<script type="text/javascript">
+window.onload=init;
+var n=1; //图片标记数
+var dingshi; //让图片动的定时器
+function init(){
+dingshi=window.setInterval("tupian()",3000);
+}
+//更换图片
+function tupian(){
+var obj=document.getElementById("gallery");
+n++;
+if(n>=10){
+n=1;
+}
+obj.src="../img/gallery/"+n+".jpg";
+}
+//鼠标放上图片停止
+function stoptupian(){
+window.clearInterval(dingshi);
+}
+//鼠标离开图片动起来
+function dongqilai(){
+dingshi=window.setInterval("tupian()",1000);
+}
+</script>
 <!-- The back top button-->
 <div align="left" style="width:840px;margin-left:auto;margin-right:auto;">
 
@@ -67,7 +93,7 @@ window.onresize=getWinSize;
  -->
 <TD width="720">
 <h2 align="center">新一代移动互联网研究中心 招生信息</h2>
-<p align="center">个人简历请发送至 <u>zhaosheng@mobinets.org</u> 或 <u>zzw@uestc.edu.cn</u></p>
+<p align="center"><b>个人简历请发送至 <u>zhaosheng@mobinets.org</u> 或 <u>zzw@uestc.edu.cn</u></b></p>
 </TD>
 <TD width="80"><a href="http://mobinets.org"><IMG width="100%" SRC="mobinets.png"/></a></TD>
 <TD width="80"><a href="http://mobinets.org"><IMG width="100%" SRC="uestc.gif"/></a></TD>
@@ -79,7 +105,7 @@ window.onresize=getWinSize;
 实验室为国家千人计划团队，具有良好的硬件条件、严谨的科研氛围、融洽的师生关系，希望招收有志于在物联网、智慧城市、5G网络演进等前沿课题有所建树的研究生和博士生，一起努力，共创未来。
 
 <p align="center">
-<IMG SRC="http://zhiweizhao.com/img/tuandui.jpg" width="60%" />
+<IMG height="300px" id="gallery" onmouseover="stoptupian()" onmouseout="dongqilai()" SRC="../img/gallery/1.jpg"/>
 </p>
 <b>指导老师</b>（包括联合指导协议教授）<br>
 <ul>
