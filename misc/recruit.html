@@ -59,12 +59,11 @@ window.onresize=getWinSize;
 </script>
 <script type="text/javascript">
 window.onload=init;
-var n=1; //图片标记数
-var dingshi; //让图片动的定时器
+var n=1; 
+var dingshi;
 function init(){
 dingshi=window.setInterval("tupian()",3000);
 }
-//更换图片
 function tupian(){
 var obj=document.getElementById("gallery");
 n++;
@@ -73,11 +72,9 @@ n=1;
 }
 obj.src="../img/gallery/"+n+".jpg";
 }
-//鼠标放上图片停止
 function stoptupian(){
 window.clearInterval(dingshi);
 }
-//鼠标离开图片动起来
 function dongqilai(){
 dingshi=window.setInterval("tupian()",1000);
 }
